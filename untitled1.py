@@ -1,9 +1,7 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Sep 28 06:35:24 2022
+import time
 
-@author: User
-"""
-mevalar=["olma","anor","uzum","anjir",'gilos',"behi"]
-ali=list(filter(lambda meva:(meva.startswith('a') and meva.endswith('r')), mevalar))
-print(ali)
+t=time.localtime(time.time())
+localtime=time.asctime(t)
+str="Current Time:"+time.asctime(t)
+
+print(str)

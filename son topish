@@ -1,0 +1,127 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Oct  1 16:11:02 2022
+
+@author: User
+"""
+
+import random
+def sontop(x=10):
+    taxminiy_son=random.randint(1, x)
+    print(f"Men 1 dan {x} gacha son o'yladim toping:")
+    taxminlar=0
+    while True:
+        taxminlar+=1
+        taxmin=int(input(">>>"))
+        if taxmin>taxminiy_son:
+            print("Men o'ylagan son bundan kichik:")
+        elif taxmin<taxminiy_son:
+            print("Men o'ylagan son bundan katta:")
+        else:
+            break
+    print(f"Tabriklaymiz! Siz {taxminlar} ta taxmin bilan topdingiz")
+    return taxminlar
+            
+def sontop_pc(x=10):
+    input(f"1 dan {x} gacha son o'ylang men topaman,istalgan tugmani bosing:")
+    quyi=1
+    yuqori=x
+    taxminlar=0
+    while True:
+        taxminlar+=1
+        if quyi!= yuqori:
+            taxmin=random.randint(quyi,yuqori)
+        else:
+            taxmin=quyi
+        javob=input(f"Siz {taxmin} sonini o'yladingiz to'g'ri bo'lsa (t) ni bosing "
+              f"men o'ylagan bundan katta (+), yoki kichik (-)").lower()
+        if javob=="+":
+            quyi=taxmin+1
+        elif javob=="-":
+            yuqori=taxmin-1
+        else:
+            break
+    print(f"Men {taxminlar} ta taxmin bilan topdim")
+    return taxminlar
+    
+def play(x=10):
+    
+    pc=0
+    use=0
+    durang=0
+    while True:
+        
+        taxminlar_user=sontop(x)
+        taxminlar_pc=sontop_pc(x)
+        if taxminlar_user>taxminlar_pc:
+            pc+=1
+            print("Men yutdim")
+        elif taxminlar_user<taxminlar_pc:
+            use+=1
+            print("Siz yutdingiz")
+        else:
+            durang+=1
+            print("Durrang")
+        print(f"Umumiy hisob: PC-{pc}, Siz-{use}, Durranglar-{durang}")
+        yana=input("Yana o'ynaymizmi: (ha,yo'q)")
+        if yana=="yo'q":
+            break
+    print("Qiziqarli o'yin bo'ldi, Sizga rahmat ")
+    
+       
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
